@@ -4,6 +4,7 @@ isPartTime=1
 isFullTime=2
 randomCheck=$((RANDOM%3))
 empWagePerHr=20
+numWorkingDays=20
 case $empCheck in
 	$isFullTime)	echo "Employee is Full-time Present."
 			empHrs=8
