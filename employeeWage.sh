@@ -8,3 +8,6 @@ then
 else
 	echo "Employee is absent."
 fi
+empWagePerHr=20
+empHr=8
+wage=$(($empWagePerHr*$empHr))
