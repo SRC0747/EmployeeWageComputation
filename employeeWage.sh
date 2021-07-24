@@ -5,6 +5,7 @@ isFullTime=2
 randomCheck=$((RANDOM%3))
 empWagePerHr=20
 numWorkingDays=20
+function getWage(){
 for (( day=1; day<=$numWorkingDays; day++ ))
 do
 	case $empCheck in
@@ -20,3 +21,4 @@ do
 	esac
 	wage=$(($empWagePerHr*$empHrs))
 done
+}
