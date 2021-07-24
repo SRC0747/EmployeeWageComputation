@@ -2,9 +2,12 @@
 echo "Welcome to Employee Wage Computation problem."
 isPartTime=1
 isFullTime=2
-randomCheck=$((RANDOM%3))
+#randomCheck=$((RANDOM%3))
 empWagePerHr=20
 numWorkingDays=20
+max_hr_in_month=4
+totalEmpHr=0
+totalWorkingDay=0
 function getWage(){
 for (( day=1; day<=$numWorkingDays; day++ ))
 do
@@ -22,3 +25,10 @@ do
 	wage=$(($empWagePerHr*$empHrs))
 done
 }
+
+while [[ ($totalEmpHr -lt $max_hr_in_month) && ($totalWorkingDay -lt $max_hr_in_month) ]]
+do
+	((totalWorkingDay++))
+	workhrs=$(getWage $((RANDOM%3)))
+	totalEmpHr=$(($totalEmpHr+$workhrs))
+done
