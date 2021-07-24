@@ -22,7 +22,6 @@ do
 				empHrs=0
 				;;
 	esac
-	wage=$(($empWagePerHr*$empHrs))
 done
 }
 
@@ -32,3 +31,4 @@ do
 	workhrs=$(getWage $((RANDOM%3)))
 	totalEmpHr=$(($totalEmpHr+$workhrs))
 done
+total_wage=$(($totalEmpHr+$empWagePerHr))
