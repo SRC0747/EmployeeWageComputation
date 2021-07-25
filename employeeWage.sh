@@ -11,7 +11,7 @@ totalWorkingDay=0
 function getWage(){
 for (( day=1; day<=$numWorkingDays; day++ ))
 do
-	case $empCheck in
+	case $1 in
 		$isFullTime)	echo "Employee is Full-time Present."
 				empHrs=8
 				;;
@@ -22,6 +22,7 @@ do
 				empHrs=0
 				;;
 	esac
+	echo $empHrs
 done
 }
 
